@@ -1,6 +1,6 @@
 # Matlab Files – FIDVC algorithm
 
-This directory contains all files needed to run the FIDVC (Fast Iterative Digital Volume Correlation) algorithm in Matlab to generate a 3D displacement field from a pair of volumetric images (undeformed and deformed). The results are saved as `u_profile.mat` and `mesh_profile.mat` for use in the volume method branch of the main Python runner script, and they need to be transferred into the Data_Hertzian_contact directory, from which the script works.
+This directory contains all files needed to run the FIDVC (Fast Iterative Digital Volume Correlation) algorithm in Matlab to generate a 3D displacement field from a pair of volumetric images (reference/undeformed and deformed). The results are saved as `u_profile.mat` and `mesh_profile.mat` for use in the volume method branch of the main Python runner script, and they need to be transferred into the Data_Hertzian_contact directory, from which the script works.
 
 Image pairs are expected to be labeled `00*.mat` (reference/undeformed) and `01*.mat` (deformed). A synthetic image pair for a standardized Hertzian contact scenario is included, but it can also be created by the Hertzian contact runner script.
 
