@@ -1,7 +1,7 @@
 # MP-TFM (Microparticle traction force microscopy)
 Volume and surface method workflow implementations based on the original publications showcasing the two approaches in microparticle traction force microscopy (MP-TFM).
 
-The conda environment for the runner script that employs both methods in an exemplary simulated Hertzian contact scenario can be built from the master.yml file. Experimental data for the DNA hydrogel microparticles analyzed in the manuscript is also included, as well as a notebook with an exemplary evaluation by the surface method.
+We provide a runner script for the Hertzian contact scenario together with the Matlab files and example data and results, as well as a JupyterLab notebook to run the surface method on our experimental data.
 
 References:
 
