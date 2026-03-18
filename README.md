@@ -31,7 +31,7 @@ Y. Wang, X. Zhang and W. Cai, Journal of the Mechanics and Physics of Solids, 20
 
 Y. Wang, ShElastic: Case06, 2021, https://github.com/yfwang09/ShElastic/blob/fc64cce8ea9a955d98fc3184e821235dff931f3d/examples/Case06-Hydrogel_deformation_test_case_with_penalty.ipynb.
 
-For analyses of experimental data, we used custom Python scripts for preprocessing in the volume method as explained in our manuscript. For experimental evaluations with the surface method, we used GeoV on DNA-HMP outlines generated in Fiji (ImageJ) to reconstruct deformed surfaces as .ply files as described in our manuscript.
+For analyses of experimental data, we used custom Python scripts for preprocessing in the volume method to recover suitable .mat files of nanoparticle distributions in reference and deformed states as explained in our manuscript. For experimental evaluations with the surface method, we used GeoV on DNA-HMP outlines generated in Fiji (ImageJ) to reconstruct deformed surfaces as .ply files as described in our manuscript.
 
 GeoV:
 
