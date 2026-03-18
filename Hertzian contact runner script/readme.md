@@ -8,19 +8,7 @@ To run the main script `Hertzian_example_runner.py` (volume and surface methods 
 
 First, install the conda environment from the `environment_master.yml` file. The environment name will be `master`.
 
-**Linux:**
-```bash
-conda env create -f environment_master.yml
-conda activate master
-```
-
-**Windows** (run in Anaconda Prompt):
-```
-conda env create -f environment_master.yml
-conda activate master
-```
-
-**Mac:**
+**Linux, Mac, and Windows (in Anaconda Prompt):**
 ```bash
 conda env create -f environment_master.yml
 conda activate master
