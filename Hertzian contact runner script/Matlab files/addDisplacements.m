@@ -93,12 +93,6 @@ for i = 1:3
 end
 
 %return
-% du0{i} shows 0 or NaN everywhere for experimental data. So only 0 after
-% inpainting.
-% Also, the dimensions are different:
-% From (:,:,1) to (:,:,17) for experimental and to (:,:,5) for simulated
-% data for each i=1,2,3.
-% (384x640x576) vs (384x384x192)
 
 idx = cell(1,3);
 for i = 1:3, idx{i} = m0{i}(1):dm:m0{i}(end); end % construct new meshgrid

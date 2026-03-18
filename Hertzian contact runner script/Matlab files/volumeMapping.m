@@ -46,7 +46,6 @@ for i = 1:3
     idx_u0{i} = linspace(1,size(u0{1},i),length(idx{i})+1); % get index for displacement meshgrid
     idx_u0{i} = idx_u0{i}(1:length(idx{i}));
     u0{i} = double(u0{i}*0.5);
-    %disp(u0{i}) % This is 0 for experimental but not for simulated data
 end
 %return
 
@@ -55,33 +54,6 @@ end
 
 u = cell(1,3);
 
-% The entries in m_u0 are different and non-zero for experimental and
-% simulated data:
-%disp(m_u0{1}(600:605))
-%disp(m_u0{2}(600:605))
-%disp(m_u0{3}(600:605))
-%all(m_u0{1}(:) == m_u0{2}(:))
-%all(m_u0{1}(:) == m_u0{3}(:))
-%all(m_u0{1}(:) == 0) % Check if all x-components are zero
-%all(m_u0{2}(:) == 0) % Check if all y-components are zero
-%all(m_u0{3}(:) == 0) % Check if all z-components are zero
-
-% Matlab is suddenly crashing at this point for experimental data, but not
-% consistently?
-%return
-
-% Initial guess u0: All entries are zero:
-%all(u0{1}(:) == 0) % Check if all x-components are zero
-%all(u0{2}(:) == 0) % Check if all y-components are zero
-%all(u0{3}(:) == 0) % Check if all z-components are zero
-
-
-%return
-
-
-% Sometimes Matlab crashes when it does mirt3D_mexinterp for experimental
-% data, but it has worked and usually will if you don't have too many
-% background processes and don't click around too much.
 
 disp('Starting mirt3D_mexinterp')
 for i = 1:3, u{i} = mirt3D_mexinterp(u0{i}, m_u0{1}, m_u0{2}, m_u0{3}); end
@@ -104,14 +76,6 @@ fprintf('\n Calculated u{i} for i=1,2,3')
 %all(u{2}(:) == 0) % Check if all y-components are zero
 %all(u{3}(:) == 0) % Check if all z-components are zero
 
-% The results from simulated data are different in x, y and z components
-% and not 0 everywhere.
-% But for experimental data, every component is the same and zero
-% everywhere.
-% However, the m_u0 are different and non-zero.
-
-
-% No crash yet
 
 %% Warp images (see eq. 8)
 %disp('Stopping before cellfun...')
@@ -131,14 +95,12 @@ disp('Calculated mBackward')
 
 %disp('Stopping before mirt3D_mexinterp')
 %return
-% It crashes sometimes when this return was active but it works if you do
-% it again and wait longer...
 
 % interpolate volume based on the deformation
 I{1} = mirt3D_mexinterp(I0{1},  mForward{1}, mForward{2}, mForward{3});
 %disp('Calculated I{1}')
 %disp('Stopping')
-%return % It crashes for experimental data here if just this return is active
+%return
 I{2} = mirt3D_mexinterp(I0{2},  mBackward{1}, mBackward{2}, mBackward{3});
 
 

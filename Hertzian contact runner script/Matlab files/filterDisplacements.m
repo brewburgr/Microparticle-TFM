@@ -36,7 +36,6 @@ function u = filterDisplacements(u0,filterSize,z)
 % Parse inputs and set defaults
 
 % Higher z value: More like a top-hat (smoother), lower value: Dirac delta
-% Paper says 10**-3 <= z <= 10**-2, so maybe try 10**-2
 % Original value: z = 0.0075 (standard value if less than 3 args passed)
 
 if nargin < 3, z = 0.0075; end

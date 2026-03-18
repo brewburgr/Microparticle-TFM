@@ -63,12 +63,10 @@ for i = 2:numImages % Reads Volumes Starting on the Second Volumes
     %Start DVC
     disp(['Current file: ' fileInfo.filename{i}])
 
-    %return % If this return is active, the code throws an error but does not crash with experimental data
+    %return
     
     [u_, cc{i-1}, dm, m] = IDVC(I,sSize0,u_);
     
-    % return % If this return is active (and no others are), the code crashes with experimental data
-    % So check IDVC for crashes with experimental data
 
     % Saving iterations of the DVC
     u{i-1}{1} = -u_{1};  u{i-1}{2} = -u_{2};  u{i-1}{3} = -u_{3}; u{i-1}{4} = u_{4};
@@ -160,7 +158,7 @@ end
 
 
 % This is the original parseInputs function, which I had to change to allow
-% for looping over multiple image pairs:
+% for looping over multiple image pairs in the exampleRunFile.m
 
 % function varargout = parseInputs(varargin)
 % %  = parseInputs(filename, sSize, incORcum)

@@ -47,9 +47,7 @@ maxIterations = 20; % maximum number of iterations, originally 20
 dm = 4; % desired output mesh spacing, originally 8. stepsize in Python
 
 convergenceCrit = [0.25, 0.5, 0.0625]; % convergence criteria
-%convergenceCrit = [0.125, 0.25, 0.03125] %stricter criteria as a test
 % Last argument is global convergence criterion.
-% Original: convergenceCrit = [0.25, 0.5, 0.0625]; % convergence criteria
 
 ccThreshold = 1e-4; % bad cross-correlation threshold
 
@@ -94,13 +92,6 @@ while ~converged01 && i - 1 < maxIterations
 
         % add the displacements from previous iteration to current
         waitbar(3/7,wb,'Adding displacements from previous iteration');
-        %disp(u) % Three zeros in both cases
-
-        %disp(du) % Three 5x5x5 doubles (synth), Three 5x9x17 doubles (exp)
-        %disp(cc) % Array with some non-zeros (synth), only zeros (exp)
-        %disp(m)
-        % Synth: {[65 129 193 257 321]}    {[65 129 193 257 321]}    {[33 65 97 129 161]}
-        % Exp: {[65 129 193 257 321]}    {[65 129 193 257 321 385 449 513 577]} {117 double}
 
         
         [u, ~, cc, mFinal] = addDisplacements(u,du,cc,m,dm);
@@ -126,8 +117,6 @@ while ~converged01 && i - 1 < maxIterations
 
         I = volumeMapping(I,m,u);
         disp('Volume mapped')
-        % return % It crashes for experimental data if this return is active (and no others are)
-        % So check volumeMapping
 
 
         disp(['Elapsed time (iteration ',num2str(i-1),'): ',num2str(toc(ti))]);
