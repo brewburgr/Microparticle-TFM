@@ -1,15 +1,19 @@
 # MP-TFM (Microparticle traction force microscopy)
 Volume and surface method workflow implementations based on the original publications showcasing the two approaches in microparticle traction force microscopy (MP-TFM).
 
-This supplements our manuscript:
+This repository accompanies our manuscript:
 
-Volume and surface methods for microparticle traction force microscopy: a computational and experimental comparison
+**Volume and surface methods for microparticle traction force microscopy: a computational and experimental comparison**
 
 Simon Brauburger, Bastian K. Kraus, Tobias Walther, Tobias Abele, Kerstin Göpfrich and Ulrich S. Schwarz
 
+---
+
 We provide a runner script for an exemplary simulated Hertzian contact scenario (applying both the volume and surface methods), together with the Matlab files for the FIDVC, and example data and results. We also provide a JupyterLab notebook that applies the surface method to our experimental data, DNA hydrogel microparticles (DNA-HMPs) deformed from the top.
 
-References:
+---
+
+**References**
 
 Volume method:
 
@@ -30,6 +34,8 @@ ShElastic package (functions for spherical harmonics, required for our scripts):
 Y. Wang, X. Zhang and W. Cai, Journal of the Mechanics and Physics of Solids, 2019, 126, 151–167.
 
 Y. Wang, ShElastic: Case06, 2021, https://github.com/yfwang09/ShElastic/blob/fc64cce8ea9a955d98fc3184e821235dff931f3d/examples/Case06-Hydrogel_deformation_test_case_with_penalty.ipynb.
+
+---
 
 For analyses of experimental data, we used custom Python scripts for preprocessing in the volume method to recover suitable nanoparticle image pairs as explained in our manuscript. For experimental evaluations with the surface method, we used GeoV on DNA-HMP outlines generated in Fiji (ImageJ) to reconstruct deformed surfaces as .ply files as described in our manuscript.
 
