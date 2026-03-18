@@ -9,7 +9,7 @@ Simon Brauburger, Bastian K. Kraus, Tobias Walther, Tobias Abele, Kerstin Göpfr
 
 ---
 
-We provide a runner script for an exemplary simulated Hertzian contact scenario (applying both the volume and surface methods), together with the Matlab files for the FIDVC, and example data and results.
+We provide a [runner script](./Hertzian%20contact%20runner%20script) for an exemplary simulated Hertzian contact scenario (applying both the volume and surface methods), together with the Matlab files for the FIDVC, and example data and results.
 
 We also include a JupyterLab notebook applying the surface method to our experimental data from DNA hydrogel microparticles (DNA-HMPs) compressed from the top.
 
