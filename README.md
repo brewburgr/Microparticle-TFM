@@ -25,7 +25,7 @@ E. Mohagheghian, J. Luo, J. Chen, G. Chaudhary, J. Chen, J. Sun, R. H. Ewoldt an
 
 D. Vorselen, Y. Wang, M. M. de Jesus, P. K. Shah, M. J. Footer, M. Huse, W. Cai and J. A. Theriot, Nature Communications, 2020, 11, 20.
 
-**Matlab FIDVC algorithm** (slightly adapted for our analyses, therefore we included it in the repo):
+**Matlab FIDVC algorithm** (slightly adapted for our analyses, therefore included in the repo):
 
 E. Bar-Kochba, J. Toyjanova, E. Andrews, K.-S. Kim and C. Franck, Experimental Mechanics, 2015, 55, 261–274.
 
