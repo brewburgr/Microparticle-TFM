@@ -21,7 +21,6 @@ We also include a JupyterLab notebook applying the surface method to our experim
 
 E. Mohagheghian, J. Luo, J. Chen, G. Chaudhary, J. Chen, J. Sun, R. H. Ewoldt and N. Wang, Nature Communications, 2018, 9, 1878.
 
-
 **Surface method**:
 
 D. Vorselen, Y. Wang, M. M. de Jesus, P. K. Shah, M. J. Footer, M. Huse, W. Cai and J. A. Theriot, Nature Communications, 2020, 11, 20.
