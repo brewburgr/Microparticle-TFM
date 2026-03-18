@@ -1,0 +1,747 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to ShElastic’s documentation! &#8212; shelastic 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">shelastic 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to ShElastic’s documentation!</a><ul>
+<li><a class="reference internal" href="#shgrad">shgrad</a></li>
+<li><a class="reference internal" href="#shutil">shutil</a></li>
+<li><a class="reference internal" href="#shelastic">shelastic</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-shelastic.shgrad">
+<span id="welcome-to-shelastic-s-documentation"></span><h1>Welcome to ShElastic’s documentation!<a class="headerlink" href="#module-shelastic.shgrad" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="shgrad">
+<h2>shgrad<a class="headerlink" href="#shgrad" title="Permalink to this headline">¶</a></h2>
+<p>Calculate gradient of a set of spherical harmonic coefficients in terms of complex
+spherical harmonic coefficients</p>
+<dl class="function">
+<dt id="shelastic.shgrad.DiffNormCoeffs">
+<code class="descclassname">shelastic.shgrad.</code><code class="descname">DiffNormCoeffs</code><span class="sig-paren">(</span><em>lmax</em>, <em>norm=None</em>, <em>csphase=1</em>, <em>shtype='irr'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shgrad.html#DiffNormCoeffs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shgrad.DiffNormCoeffs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the normalization coefficients for VSH2</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shgrad.ISHgrad">
+<code class="descclassname">shelastic.shgrad.</code><code class="descname">ISHgrad</code><span class="sig-paren">(</span><em>coeffs</em>, <em>norm='4pi'</em>, <em>csphase=1</em>, <em>r=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shgrad.html#ISHgrad"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shgrad.ISHgrad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the gradient of irregular solid harmonics (given unit radius)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shgrad.SHMultiplyC">
+<code class="descclassname">shelastic.shgrad.</code><code class="descname">SHMultiplyC</code><span class="sig-paren">(</span><em>sh1</em>, <em>sh2</em>, <em>lmax_calc=100</em>, <em>norm='4pi'</em>, <em>csphase=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shgrad.html#SHMultiplyC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shgrad.SHMultiplyC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the product of two sets of complex spherical harmonic coefficients</p>
+<p>The function will take two sets of complex spherical harmonic coefficients <cite>sh1</cite>
+and <cite>sh2</cite>, return the product of the two functions represented in spherical
+harmonics. The returned coefficient array is the spherical harmonic representation
+of the product of <cite>sh1</cite> and <cite>sh2</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sh1</strong><strong>,</strong><strong>sh2</strong> (<em>complex</em><em>, </em><em>dimension</em><em> [</em><em>2</em><em>, </em><em>lmax + 1</em><em>, </em><em>lmax + 1</em><em>]</em>) – 2 set of SH coefficients with the same size, following SHTOOLS conventions.</li>
+<li><strong>lmax_calc</strong> (<em>int</em>) – not used</li>
+<li><strong>norm</strong> (<em>optional</em><em>, </em><em>[</em><em>'4pi'</em><em>, </em><em>'ortho'</em><em>, </em><em>'schmidt'</em><em>, </em><em>'unnorm'</em><em>]</em><em>, </em><em>default='4pi'</em>) – Normalization of the spherical harmonic functions</li>
+<li><strong>csphase</strong> (<em>optional</em><em>, </em><em>integer</em><em>, </em><em>[</em><em>1</em><em>, </em><em>-1</em><em>]</em><em>, </em><em>default=1</em>) – Condon-Shortley phase</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Spherical harmonic representation of the product.
+Same dimension as sh1 and sh2</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">complex, dimension (2, lmax + 1, lmax + 1)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>multiply the functions in the space domain, and expand the resulting
+field in spherical harmonics using SHExpandGLQ. The spherical harmonic
+bandwidth of the resulting field is lmax, which is also the bandwidths
+of the input fields.
+Conventions can be set by the optional arguments norm and csphase;
+if not set, the default is to use geodesy 4-pi normalized harmonics
+and exclude the Condon-Shortley phase of <span class="math notranslate nohighlight">\((-1)^m\)</span>. See
+<a class="reference external" href="https://shtools.oca.eu/shtools/complex-spherical-harmonics.html">Complex spherical harmonics</a>
+in SHTOOLS</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shgrad.VSH1">
+<code class="descclassname">shelastic.shgrad.</code><code class="descname">VSH1</code><span class="sig-paren">(</span><em>coeffs</em>, <em>norm='4pi'</em>, <em>csphase=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shgrad.html#VSH1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shgrad.VSH1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the first vector spherical harmonics (directional)</p>
+<p>The function will take a spherical harmonic coefficient array,
+multiply by the normal vector, and return the first vector
+spherical harmonics in Cartesian coordinates.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>coeffs</strong> (<em>complex</em><em>, </em><em>dimension</em><em> [</em><em>2</em><em>, </em><em>lmax + 1</em><em>, </em><em>lmax + 1</em><em>]</em>) – one set of SH coefficients representing a function
+following SHTOOLS conventions.</li>
+<li><strong>norm</strong> (<em>optional</em><em>, </em><em>[</em><em>'4pi'</em><em>, </em><em>'ortho'</em><em>, </em><em>'schmidt'</em><em>, </em><em>'unnorm'</em><em>]</em><em>, </em><em>default='4pi'</em>) – Normalization of the spherical harmonic functions</li>
+<li><strong>csphase</strong> (<em>optional</em><em>, </em><em>integer</em><em>, </em><em>[</em><em>1</em><em>, </em><em>-1</em><em>]</em><em>, </em><em>default=1</em>) – Condon-Shortley phase</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Spherical harmonic representation of the first vector
+spherical harmonics.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">complex, dimension (2, lmax + 1, lmax + 1, 3)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The first vector spherical harmonics is defined as:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{Y}_l^m(\theta, \varphi) = Y_l^m(\theta, \varphi) \hat{r}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{r}=\left[x/r, y/r, z/r\right]^T\)</span> is the unit normal vector in radial
+direction, in Cartesian coordinates:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{Y}_l^m = Y_l^m \left[\frac{x}{r}, \frac{y}{r}, \frac{z}{r}\right]^T\]</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shgrad.VSH2">
+<code class="descclassname">shelastic.shgrad.</code><code class="descname">VSH2</code><span class="sig-paren">(</span><em>coeffs</em>, <em>norm='4pi'</em>, <em>csphase=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shgrad.html#VSH2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shgrad.VSH2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the second vector spherical harmonics (gradient)</p>
+<p>The function will take a spherical harmonic coefficient array,
+take the derivative, and return the second vector
+spherical harmonics in Cartesian coordinates.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>coeffs</strong> (<em>complex</em><em>, </em><em>dimension</em><em> [</em><em>2</em><em>, </em><em>lmax + 1</em><em>, </em><em>lmax + 1</em><em>]</em>) – one set of SH coefficients representing a function
+following SHTOOLS conventions.</li>
+<li><strong>norm</strong> (<em>optional</em><em>, </em><em>[</em><em>'4pi'</em><em>, </em><em>'ortho'</em><em>, </em><em>'schmidt'</em><em>, </em><em>'unnorm'</em><em>]</em><em>, </em><em>default='4pi'</em>) – Normalization of the spherical harmonic functions</li>
+<li><strong>csphase</strong> (<em>optional</em><em>, </em><em>integer</em><em>, </em><em>[</em><em>1</em><em>, </em><em>-1</em><em>]</em><em>, </em><em>default=1</em>) – Condon-Shortley phase</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Spherical harmonic representation of the second vector
+spherical harmonics.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">complex, dimension (2, lmax + 1, lmax + 1, 3)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The second vector spherical harmonics is defined as:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{\Psi}_l^m(\theta, \varphi) = r\nabla Y_l^m(\theta, \varphi)\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the radius. The 2nd VSH represents the gradient of a
+spherical harmonic function in Cartesian coordinates.</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{\Psi}_l^m = r\left[\frac{\partial Y_l^m}{\partial x}, \frac{\partial Y_l^m}{\partial y}, \frac{\partial Y_l^m}{\partial z}\right]^T\]</div>
+</dd></dl>
+
+</div>
+<span class="target" id="module-shelastic.shutil"></span><div class="section" id="shutil">
+<h2>shutil<a class="headerlink" href="#shutil" title="Permalink to this headline">¶</a></h2>
+<p>utility functions</p>
+<dl class="function">
+<dt id="shelastic.shutil.CartCoord_to_SphCoord">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">CartCoord_to_SphCoord</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em>, <em>Z</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#CartCoord_to_SphCoord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.CartCoord_to_SphCoord" title="Permalink to this definition">¶</a></dt>
+<dd><p>translate Cartesian coordinates into spherical coordinates</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>X</strong><strong>,</strong><strong>Y</strong><strong>,</strong><strong>Z</strong> (<em>ndarray</em>) – make sure X, Y, Z have the same dimensions</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>R,THETA,PHI</strong> – same size as X, Y, Z.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.ILM_list">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">ILM_list</code><span class="sig-paren">(</span><em>lmax</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#ILM_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.ILM_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>return (i, l, m) indices of Cilm array for all SH modes below lmax</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.K2lmk">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">K2lmk</code><span class="sig-paren">(</span><em>K</em>, <em>lmax</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#K2lmk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.K2lmk" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert vector index to spherical harmonic vector indices</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lmk2K</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">(1, 0, 1)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.L2lm">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">L2lm</code><span class="sig-paren">(</span><em>L</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#L2lm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.L2lm" title="Permalink to this definition">¶</a></dt>
+<dd><p>translate 1d index L to 2d indices (l, m)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.LM_list">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">LM_list</code><span class="sig-paren">(</span><em>lmax</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#LM_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.LM_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>return l and m indices for all SH modes below lmax</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>lmax</strong> (<em>int</em>) – maximum SH l-order</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><ul class="simple">
+<li><strong>l</strong> (<em>int, dimension ((lmax+1)^2, )</em>) – a list of l indices for all the SH indices below lmax</li>
+<li><strong>m</strong> (<em>int, dimension ((lmax+1)^2, )</em>) – a list of m indices for all the SH indices below lmax</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.SHCilmToVector">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">SHCilmToVector</code><span class="sig-paren">(</span><em>cilm</em>, <em>lmax=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#SHCilmToVector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.SHCilmToVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function convert SH array to 1d vector</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SHCilmToVector</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="n">j</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="go">                              [2+2j, 3+3j, 0, 0],</span>
+<span class="go">                              [4+4j, 5+5j, 6+6j, 0],</span>
+<span class="go">                              [7+7j, 8+8j, 9+9j, 10+10j]],</span>
+<span class="go">                             [[0, 0, 0, 0],</span>
+<span class="go">                              [0, 3-3j, 0, 0],</span>
+<span class="go">                              [0, 5-5j, 6-6j, 0],</span>
+<span class="go">                              [0, 8-8j, 9-9j, 10-10j]]]))</span>
+<span class="go">array([ 1. +1.j,  3. -3.j,  2. +2.j,  3. +3.j,  6. -6.j,  5. -5.j,</span>
+<span class="go">4. +4.j,  5. +5.j,  6. +6.j, 10.-10.j,  9. -9.j,  8. -8.j,</span>
+<span class="go">7. +7.j,  8. +8.j,  9. +9.j, 10.+10.j])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.SHVectorToCilm">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">SHVectorToCilm</code><span class="sig-paren">(</span><em>vec</em>, <em>lmax=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#SHVectorToCilm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.SHVectorToCilm" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function convert 1d vector to SH array</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SHVectorToCilm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="n">j</span><span class="p">,</span> <span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">,</span> <span class="mi">3</span><span class="o">+</span><span class="mi">3</span><span class="n">j</span><span class="p">,</span> <span class="mi">4</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span><span class="p">,</span> <span class="mi">5</span><span class="o">+</span><span class="mi">5</span><span class="n">j</span><span class="p">,</span> <span class="mi">6</span><span class="o">+</span><span class="mi">6</span><span class="n">j</span><span class="p">,</span> <span class="mi">7</span><span class="o">+</span><span class="mi">7</span><span class="n">j</span><span class="p">,</span> <span class="mi">8</span><span class="o">+</span><span class="mi">8</span><span class="n">j</span><span class="p">,</span> <span class="mi">9</span><span class="o">+</span><span class="mi">9</span><span class="n">j</span><span class="p">]))</span>
+<span class="go">array([[[1.+1.j, 0.+0.j, 0.+0.j],</span>
+<span class="go">        [3.+3.j, 4.+4.j, 0.+0.j],</span>
+<span class="go">        [7.+7.j, 8.+8.j, 9.+9.j]],</span>
+<span class="go">       [[0.+0.j, 0.+0.j, 0.+0.j],</span>
+<span class="go">        [0.+0.j, 2.+2.j, 0.+0.j],</span>
+<span class="go">        [0.+0.j, 6.+6.j, 5.+5.j]]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.SphCoord_to_CartCoord">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">SphCoord_to_CartCoord</code><span class="sig-paren">(</span><em>R</em>, <em>THETA</em>, <em>PHI</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#SphCoord_to_CartCoord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.SphCoord_to_CartCoord" title="Permalink to this definition">¶</a></dt>
+<dd><p>translate spherical coordinates into Cartesian coordinates</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>R</strong><strong>,</strong><strong>THETA</strong><strong>,</strong><strong>PHI</strong> (<em>ndarray</em>) – make sure R, THETA, PHI have the same dimensions</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>X,Y,Z</strong> – same size as R, THETA, PHI.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">ndarray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.TransMat">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">TransMat</code><span class="sig-paren">(</span><em>t_mesh=None</em>, <em>p_mesh=None</em>, <em>lJmax=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#TransMat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.TransMat" title="Permalink to this definition">¶</a></dt>
+<dd><p>coordinate translation matrix for vector and tensor</p>
+<p>Given theta, phi mesh, or lJmax value, return the translation
+matrix for vector and tensor. i.e. f = Q.dot(x)
+where x is in Cartesian coordinates and f is in spherical
+coordinates. If you select to provide lJmax, the generated
+coordinate is [GLQ coordinates](<a class="reference external" href="https://shtools.oca.eu/shtools/pyglqgridcoord.html">https://shtools.oca.eu/shtools/pyglqgridcoord.html</a>)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t_mesh</strong><strong>,</strong><strong>p_mesh</strong> (<em>ndarray</em>) – theta and phi mesh with same dimension.</li>
+<li><strong>lJmax</strong> (<em>optional</em><em>, </em><em>int</em>) – if t_mesh and p_mesh not provided, generate theta and
+phi mesh based on GLQ gridding.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>Q</strong> – 3x3 matrix corresponding to the given mesh.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">ndarray, dimension t_mesh.shape + (3, 3)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.dense_mode">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">dense_mode</code><span class="sig-paren">(</span><em>mode</em>, <em>d</em>, <em>lmax</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#dense_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.dense_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>extract SH tensor from 1d sparse representation</p>
+<p>extract a SH scalar(1x1), vector(3x1) or SH tensor(3x3) from the sparse
+representation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>mode</strong> (<em>scipy lil sparse matrix</em><em>, </em><em>dimension</em><em> (</em><em>(</em><em>3^d</em><em>)</em><em>*</em><em>(</em><em>lmax+1</em><em>)</em><em>^2</em><em>, </em><em>1</em><em>)</em>) – a compressed sparse matrix representation of SH vector or tensor</li>
+<li><strong>d</strong> (<em>int</em>) – value from 0, 1, or 2. representing scalar, vector and tensor correspondingly</li>
+<li><strong>lmax</strong> (<em>int</em>) – maximum SH l-order</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>M</strong> – SH scalar, vector or tensor, every element is a SH-coefficient array
+of maximum l-order</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">complex, dimension (2, lmax+1, lmax+1), (2, lmax+1, lmax+1, 3) or (2, lmax+1, lmax+1, 3, 3)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.eval_GridC">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">eval_GridC</code><span class="sig-paren">(</span><em>coeff</em>, <em>latin</em>, <em>lonin</em>, <em>rin=1.0</em>, <em>lmax_calc=None</em>, <em>norm=None</em>, <em>shtype=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#eval_GridC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.eval_GridC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate values of solid spherical harmonics on grids</p>
+<p>evaluate Ilm and Rlm given lattitude and longitude list of the grid points</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>coeff</strong> (<em>SHCoeffs</em>) – SHTOOLS coefficient class</li>
+<li><strong>latin</strong><strong>,</strong><strong>lonin</strong> (<em>array_like</em><em>, </em><em>same size</em>) – lattitude and longitude list of grids for evaluating values</li>
+<li><strong>rin</strong> (<em>float</em><em> or </em><em>array_like</em><em> (</em><em>same size as latin and lonin</em><em>)</em>) – If float, evaluate spherical harmonics on sphere surface with radius rin;
+If array_like, evaluate on grid points</li>
+<li><strong>lmax_calc</strong> (<em>int</em>) – Maximum l order to evaluate, the orders greater lmax_calc are truncated.</li>
+<li><strong>norm</strong> (<em>string</em><em>, </em><em>[</em><em>'4pi'</em><em>, </em><em>'schmidt'</em><em>, </em><em>'ortho'</em><em>]</em><em>, </em><em>default same as coeff</em>) – Normalization convention</li>
+<li><strong>shtype</strong> (<em>string</em><em>, </em><em>[</em><em>'irr'</em><em>, </em><em>'reg'</em><em>]</em>) – Type of solid spherical harmonics</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>values</strong> – Evaluated values on grids</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">complex, same dimension as latin and lonin</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.l_coeffs">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">l_coeffs</code><span class="sig-paren">(</span><em>lmax</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#l_coeffs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.l_coeffs" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates a coefficient array with their l order</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">l_coeffs</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">array([[[0, 0, 0, 0],</span>
+<span class="go">        [1, 1, 1, 1],</span>
+<span class="go">        [2, 2, 2, 2],</span>
+<span class="go">        [3, 3, 3, 3]],</span>
+<span class="go">       [[0, 0, 0, 0],</span>
+<span class="go">        [1, 1, 1, 1],</span>
+<span class="go">        [2, 2, 2, 2],</span>
+<span class="go">        [3, 3, 3, 3]]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.lm2L">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">lm2L</code><span class="sig-paren">(</span><em>l</em>, <em>m</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#lm2L"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.lm2L" title="Permalink to this definition">¶</a></dt>
+<dd><p>translate 2d indices (l, m) to 1d index L</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.lmk2K">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">lmk2K</code><span class="sig-paren">(</span><em>l</em>, <em>m</em>, <em>k</em>, <em>lmax</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#lmk2K"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.lmk2K" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert spherical harmonic vector indices to vector index</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lmk2K</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">23</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.m_coeffs">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">m_coeffs</code><span class="sig-paren">(</span><em>lmax</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#m_coeffs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.m_coeffs" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates a coefficient array with their m order</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m_coeffs</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">array([[[0, 1, 2, 3],</span>
+<span class="go">        [0, 1, 2, 3],</span>
+<span class="go">        [0, 1, 2, 3],</span>
+<span class="go">        [0, 1, 2, 3]],</span>
+<span class="go">       [[0, 1, 2, 3],</span>
+<span class="go">        [0, 1, 2, 3],</span>
+<span class="go">        [0, 1, 2, 3],</span>
+<span class="go">        [0, 1, 2, 3]]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shutil.sparse_mode">
+<code class="descclassname">shelastic.shutil.</code><code class="descname">sparse_mode</code><span class="sig-paren">(</span><em>M_K</em>, <em>lmax=None</em>, <em>etol=1e-08</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shutil.html#sparse_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shutil.sparse_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>create sparse representation of SH vector or tensor</p>
+<p>compress a vector or tensor of SH coefficients into 1d sparse vector</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>M_K</strong> (<em>complex</em><em>, </em><em>dimension</em><em> (</em><em>2</em><em>, </em><em>lmax+1</em><em>, </em><em>lmax+1</em><em>)</em><em>, </em><em>(</em><em>2</em><em>, </em><em>lmax+1</em><em>, </em><em>lmax+1</em><em>, </em><em>3</em><em>) or </em><em>(</em><em>2</em><em>, </em><em>lmax+1</em><em>, </em><em>lmax+1</em><em>, </em><em>3</em><em>, </em><em>3</em><em>)</em>) – SH scalar, vector or tensor, every element is a SH-coefficient array
+of maximum l-order</li>
+<li><strong>lmax</strong> (<em>int</em>) – maximum SH l-order</li>
+<li><strong>etol</strong> (<em>float</em>) – coefficients below etol are considered 0</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a compressed sparse matrix representation of d-element SH vector</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">scipy lil sparse matrix, dimension (d*(lmax+1)^2, 1)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span class="target" id="module-shelastic.shelastic"></span><div class="section" id="shelastic">
+<h2>shelastic<a class="headerlink" href="#shelastic" title="Permalink to this headline">¶</a></h2>
+<p>Generating the spherical harmonic representation of displacement basis <span class="math notranslate nohighlight">\(u^{(K)}\)</span>,
+stress basis <span class="math notranslate nohighlight">\(\mathbf{\sigma}^{(K)}\)</span>, and traction basis <span class="math notranslate nohighlight">\(\mathbf{T}^{(K)}\)</span>
+with index K (k,l,m).</p>
+<dl class="function">
+<dt id="shelastic.shelastic.calSmode">
+<code class="descclassname">shelastic.shelastic.</code><code class="descname">calSmode</code><span class="sig-paren">(</span><em>Smode</em>, <em>mu</em>, <em>nu</em>, <em>c_omega=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shelastic.html#calSmode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shelastic.calSmode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate spherical harmonic tensor representation of stress given shear modulus mu and Poisson’s ratio nu</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Smode</strong> (<em>tuple</em><em>, </em><em>(</em><em>S_nu1</em><em>, </em><em>S_nu2</em><em>, </em><em>S_nu3</em><em>, </em><em>S_0</em><em>)</em>) – stress mode calculated by genSmode</li>
+<li><strong>mu</strong> (<em>float</em>) – shear modulus</li>
+<li><strong>nu</strong> (<em>float</em>) – Poisson’s ratio</li>
+<li><strong>c_omega</strong> (<em>float</em><em>, </em><em>optional</em>) – pre-factor, not used</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Spherical harmonic vector representation of the displacement basis given mu and nu.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">complex, dimension (2, lmax + 1, lmax + 1, 3, 3)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shelastic.calTmode">
+<code class="descclassname">shelastic.shelastic.</code><code class="descname">calTmode</code><span class="sig-paren">(</span><em>S_K</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shelastic.html#calTmode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shelastic.calTmode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate spherical harmonic vector representation of traction given the stress tensor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>S_K</strong> (<em>complex</em><em>, </em><em>dimension</em><em> (</em><em>2</em><em>, </em><em>lmax + 1</em><em>, </em><em>lmax + 1</em><em>, </em><em>3</em><em>, </em><em>3</em><em>)</em>) – stress spherical-harmonic tensor</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>T_K</strong> – Spherical harmonic vector representation of the traction.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">complex, dimension (2, lmax + 1, lmax + 1, 3)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shelastic.calUmode">
+<code class="descclassname">shelastic.shelastic.</code><code class="descname">calUmode</code><span class="sig-paren">(</span><em>Umode</em>, <em>mu</em>, <em>nu</em>, <em>c_omega=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shelastic.html#calUmode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shelastic.calUmode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate spherical harmonic vector representation of displacement given shear modulus mu and Poisson’s ratio nu</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Umode</strong> (<em>tuple</em><em>, </em><em>(</em><em>U_nu</em><em>, </em><em>U_0</em><em>)</em>) – displacement mode calculated by genUmode</li>
+<li><strong>mu</strong> (<em>float</em>) – shear modulus</li>
+<li><strong>nu</strong> (<em>float</em>) – Poisson’s ratio</li>
+<li><strong>c_omega</strong> (<em>float</em><em>, </em><em>optional</em>) – pre-factor, not used</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Spherical harmonic vector representation ofthe displacement basis given mu and nu.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">complex, dimension (2, lmax + 1, lmax + 1, 3)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shelastic.genGradU">
+<code class="descclassname">shelastic.shelastic.</code><code class="descname">genGradU</code><span class="sig-paren">(</span><em>U</em>, <em>shtype='irr'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shelastic.html#genGradU"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shelastic.genGradU" title="Permalink to this definition">¶</a></dt>
+<dd><p>generate displacement gradient tensor of a spherical-harmonic displacement vector</p>
+<p>Calculate the displacement gradient tensor grad(U) given a spherical
+harmonic vector representation of displacement U. This function
+returns a spherical harmonic tensor gradU given the type of vector spherical harmonics
+(regular or irregular)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>U</strong> (<em>complex</em><em>, </em><em>dimension</em><em> (</em><em>2</em><em>, </em><em>lmax + 1</em><em>, </em><em>lmax + 1</em><em>, </em><em>3</em><em>)</em>) – Spherical harmonic representation of the displacement vector</li>
+<li><strong>shtype</strong> (<em>str</em><em>, </em><em>[</em><em>'irr'</em><em> or </em><em>'reg'</em><em>]</em>) – ‘irr’ represents irregular spherical harmonics for spherical void
+‘reg’ represents regular spherical harmonics for solid sphere</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>gradu</strong> – Spherical harmonic representation of the displacement gradient tensor.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">complex, dimension (2, lmax + 1, lmax + 1, 3, 3)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>See (A.16) in the paper for the equation and derivation of the stress
+solution</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shelastic.genSmode">
+<code class="descclassname">shelastic.shelastic.</code><code class="descname">genSmode</code><span class="sig-paren">(</span><em>l</em>, <em>m</em>, <em>k</em>, <em>shtype='irr'</em>, <em>lmax=None</em>, <em>returnU=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shelastic.html#genSmode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shelastic.genSmode" title="Permalink to this definition">¶</a></dt>
+<dd><p>generate stress mode (K) = (l,m,k)</p>
+<p>Calculate the stress tensor basis of indices (l,m,k) at unit
+sphere (r = 1), and unit shear modulus (mu = 1). This function
+returns S_nu1, S_nu2, S_nu3, and S_0 which do not depend on
+Poisson’s ratio nu.</p>
+<p>Use calSmode((S_nu1, S_nu2, S_nu3, S_0), mu, nu) to obtain the
+stress tensor given shear modulus mu and Poisson’s ratio nu.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>l</strong><strong>,</strong><strong>m</strong><strong>,</strong><strong>k</strong> (<em>int</em>) – indices of the basis, l=0,1,2,…; m=-l,-l+1,…,l-1,l; k=0,1,2.</li>
+<li><strong>shtype</strong> (<em>str</em><em>, </em><em>[</em><em>'irr'</em><em> or </em><em>'reg'</em><em>]</em>) – ‘irr’ represents irregular spherical harmonics for spherical void
+‘reg’ represents regular spherical harmonics for solid sphere</li>
+<li><strong>lmax</strong> (<em>int</em><em>, </em><em>l+3 by default</em>) – maximum l order to save the spherical harmonic coefficients.</li>
+<li><strong>returnU</strong> (<em>bool</em>) – If True, the displacement basis will also be returned.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><ul class="simple">
+<li><strong>U_nu,U_0</strong> (<em>complex, dimension (2, lmax + 1, lmax + 1, 3)</em>) – Spherical harmonic representation of the two parts of the
+displacement basis. only returned when returnU is True.</li>
+<li><strong>S_nu1,S_nu2,S_nu3,S_0</strong> (<em>complex, dimension (2, lmax + 1, lmax + 1, 3, 3)</em>) – Spherical harmonic representation of the four parts of the
+stress tensor basis.</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>See (A.17) in the paper for the equation and derivation of the stress
+solution</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shelastic.genUmode">
+<code class="descclassname">shelastic.shelastic.</code><code class="descname">genUmode</code><span class="sig-paren">(</span><em>l</em>, <em>m</em>, <em>k</em>, <em>shtype='irr'</em>, <em>lmax=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shelastic.html#genUmode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shelastic.genUmode" title="Permalink to this definition">¶</a></dt>
+<dd><p>generate displacement mode (K) = (l,m,k)</p>
+<p>Calculate the displacement vector basis of indices (l,m,k) at unit
+sphere (r = 1), and unit shear modulus (mu = 1). This function
+returns U_nu and U_0 which do not depend on Poisson’s ratio nu.
+use calUmode((U_nu, U_0), mu, nu) to obtain the displacement
+vector given shear modulus mu and Poisson’s ratio nu.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>l</strong><strong>,</strong><strong>m</strong><strong>,</strong><strong>k</strong> (<em>int</em>) – indices of the basis, l=0,1,2,…; m=-l,-l+1,…,l-1,l; k=0,1,2.</li>
+<li><strong>shtype</strong> (<em>str</em><em>, </em><em>[</em><em>'irr'</em><em> or </em><em>'reg'</em><em>]</em>) – ‘irr’ represents irregular spherical harmonics for spherical void
+‘reg’ represents regular spherical harmonics for solid sphere</li>
+<li><strong>lmax</strong> (<em>int</em><em>, </em><em>l+3 by default</em>) – maximum l order to save the spherical harmonic coefficients.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>U_nu,U_0</strong> – Spherical harmonic representation of the two parts of the
+displacement basis.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">complex, dimension (2, lmax + 1, lmax + 1, 3)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>See (A.10) in the paper for the equation and derivation of the displacement
+solution</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelastic.shelastic.generate_modes">
+<code class="descclassname">shelastic.shelastic.</code><code class="descname">generate_modes</code><span class="sig-paren">(</span><em>lmax</em>, <em>etol=1e-08</em>, <em>save_lmax=None</em>, <em>path='.'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/shelastic/shelastic.html#generate_modes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#shelastic.shelastic.generate_modes" title="Permalink to this definition">¶</a></dt>
+<dd><p>procedure for generating spherical harmonic modes in sparse matrix format</p>
+<p>The procedure saves .mat file that includes all the elasticity bases with
+l &lt;= lmax.</p>
+<p>Umodes.mat:</p>
+<p>‘U0irr’, ‘U1irr’: U_0 and U_nu for irregular spherical harmonics;
+‘U0reg’, ‘U1reg’: U_0 and U_nu for regular spherical harmonics;
+Every element is a sparse matrix of size (3x(save_lmax+1)^2, 3x(lmax+1)^2)</p>
+<p>Smodes.mat:</p>
+<p>‘S0irr’, ‘S1irr’, ‘S2irr’, ‘S3irr’: S_0, S_nu1, S_nu2, S_nu3 for irregular spherical harmonics;
+‘S0reg’, ‘S1reg’, ‘S2reg’, ‘S3reg’: S_0, S_nu1, S_nu2, S_nu3 for regular spherical harmonics;
+Every element is a sparse matrix of size (9x(save_lmax+1)^2, 3x(lmax+1)^2)</p>
+<p>Tmodes.mat:</p>
+<p>‘T0irr’, ‘T1irr’, ‘T2irr’, ‘T3irr’: T_0, T_nu1, T_nu2, T_nu3 for irregular spherical harmonics;
+‘T0reg’, ‘T1reg’, ‘T2reg’, ‘T3reg’: T_0, T_nu1, T_nu2, T_nu3 for regular spherical harmonics;
+Every element is a sparse matrix of size (3x(save_lmax+1)^2, 3x(lmax+1)^2)</p>
+<p>To calculate traction given mu and nu, use calSmode((T_0, T_nu1, T_nu2, T_nu3), mu, nu)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lmax</strong> (<em>int</em>) – generating all the spherical harmonic modes of l &lt;= lmax</li>
+<li><strong>etol</strong> (<em>float</em>) – Threshold below which is considered as noise (save space for sparse matrix)</li>
+<li><strong>save_lmax</strong> (<em>int</em><em>, </em><em>by default lmax+3</em>) – maximum lmax needed for saving all the elasticity solutions</li>
+<li><strong>path</strong> (<em>string</em>) – path for saving the modes</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">shelastic 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Yifan Wang.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.7.
+    </div>
+  </body>
+</html>
