@@ -479,8 +479,6 @@ class Axialsymmetric():
         else:
             return I*prefactor
 
-    #This calculates some error quantity AAD but I don't see why it is calculated like that
-    #Maybe this is an error approximation for the integral
 
     def integrand_AAD(self,th):
         val=np.sin(th)*np.sqrt(self.sigma_rt_true(th)**2+self.sigma_rr_true(th)**2)
@@ -501,21 +499,21 @@ class Axialsymmetric():
 
 
     def calc_and_store_lgs(self,printsteps=False):
-        for n in range(0,self.nmax+1):   #Equation (27) is for each n from 0 to n_max
+        for n in range(0,self.nmax+1):
             if self.symmetric:
                 if n % 2==0:
                     iterator=True
                 else:
-                    iterator=False   #no iteration if n is odd in the symmetric case (?)
+                    iterator=False
             else:
                 iterator=True
 
-            if iterator:   #The LHS in equation (27) is obtained by integration (equations (25, 26)), including the prefactor with mu and o_nn
+            if iterator:  
                 I0=self.calc_integral_rr(n,print_integral_value=printsteps)
                 I1=self.calc_integral_rt(n,print_integral_value=printsteps)
-                I=np.array([I0,I1])   #LHS of equation (27) (including prefactors)
+                I=np.array([I0,I1])
 
-                A=self.calc_coeff_matrix(n)   #RHS matrix of equation (27), but with alpha_n_(0) and alpha_n_(1) missing a - sign and epsilons and alphas being swapped.
+                A=self.calc_coeff_matrix(n)
 
                 if printsteps:
                     print(n)
@@ -2516,7 +2514,7 @@ class Hertzian_contact(Axialsymmetric):
 
 # Method selection (can choose both)
 surface_method = True             # Use surface method reconstruction
-volume_method = False              # Use volume method reconstruction
+volume_method = True              # Use volume method reconstruction
 
 # Surface method settings:
 # Fibonacci grid is used as standard for robust sampling (GLQ would introduce bias to poles)
