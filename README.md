@@ -1,7 +1,7 @@
 # Microparticle traction force microscopy
-Volume and surface method workflow implementations based on the original publications showcasing the two approaches in microparticle traction force microscopy (MP-TFM).
+This repository provides implementations of traction reconstructions by the volume and surface workflows in microparticle traction force microscopy (MP-TFM), together with example simulations, analysis scripts, and experimental workflows described in our manuscript.
 
-This repository accompanies our manuscript:
+It accompanies our manuscript:
 
 **Volume and surface methods for microparticle traction force microscopy: a computational and experimental comparison**
 
