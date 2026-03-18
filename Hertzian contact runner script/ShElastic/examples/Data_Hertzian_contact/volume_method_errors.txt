@@ -2,7 +2,7 @@
 HERTZIAN CONTACT - VOLUME METHOD ERROR ANALYSIS
 ======================================================================
 
-Runtime: 15.81s
+Runtime: 17.96s
 E = 1500 Pa, nu = 0.4
 Microparticle radius = 12000000.0 μm
 
@@ -18,8 +18,8 @@ COMPUTATIONAL PARAMETERS:
 
 SYNTHETIC NANOPARTICLE DISTRIBUTION PARAMETERS:
   Bead density: 0.002
-  Bead diameter (code units): 1.6666666666666667e-08
-  Bead diameter (physical): 200.0 nm
+  Bead diameter (code units): 0.016666666666666666
+  Bead diameter (physical): 200000000.0 nm
   Box size: 1.28
   Displacement noise amplitude: 0.17
 
@@ -27,69 +27,69 @@ ERROR METRICS:
 ------------------------------------------------------------
 FULL SPHERE (includes traction-free region):
    Errortype     T_sph_1     T_sph_2     T_sph_3    T_cart_1    T_cart_2    T_cart_3
-0       RMSE  105.466899   45.270294    1.909307    8.052861    9.475297  114.112584
-1        MAE   78.275014   36.067361    1.401063    6.164971    6.920364   87.698651
-2        MBE   14.043224   -1.151304    0.096044    0.634225    0.164305   13.672124
-3      NRMSE    0.416189    0.748127    0.000000    0.000000    0.000000    0.437992
-4       NMAE    0.308885    0.596041    0.000000    0.000000    0.000000    0.336609
-5       NMBE    0.055417   -0.019026    0.000000    0.000000    0.000000    0.052477
+0       RMSE  105.647061   45.194846    2.130288    8.749202    9.230033  114.222028
+1        MAE   78.579772   35.992834    1.549396    6.863877    6.597756   87.837107
+2        MBE   16.124222   -0.660339    0.050723   -0.619198    0.515302   10.997721
+3      NRMSE    0.416900    0.746880    0.000000    0.000000    0.000000    0.438412
+4       NMAE    0.310088    0.594810    0.000000    0.000000    0.000000    0.337140
+5       NMBE    0.063629   -0.010913    0.000000    0.000000    0.000000    0.042212
 6       AAD0  137.027301   31.714828    0.000000    0.000000    0.000000  141.866485
-7    AAD_est  123.115087   49.310800    1.401063    6.164971    6.920364  135.561043
-8     NRMSE2    0.749856    0.321866    0.013575    0.056764    0.066790    0.804366
-9      NMAE2    0.556525    0.256434    0.009961    0.043456    0.048781    0.618177
-10     NMBE2    0.099845   -0.008186    0.000683    0.004471    0.001158    0.096373
+7    AAD_est  120.987425   48.880086    1.549396    6.863877    6.597756  133.284117
+8     NRMSE2    0.751137    0.321329    0.015146    0.061672    0.065061    0.805138
+9      NMAE2    0.558692    0.255904    0.011016    0.048383    0.046507    0.619153
+10     NMBE2    0.114641   -0.004695    0.000361   -0.004365    0.003632    0.077522
 11      AAD2  140.649606  140.649606  140.649606  141.866485  141.866485  141.866485
 ------------------------------------------------------------
 
 NMRE = mean(|T_recon - T_true| / (|T_true| + eps)) over region
 NMAE = mean(|T_recon - T_true|) / mean(|T_true|) over region
 CONTACT REGION ONLY Error Metrics:
-  T_r NMRE  = 0.3601 (36.01%)
-  T_r NMAE  = 0.3601 (36.01%)
-  T_r NRMSE = 0.3746 (37.46%)
-  T_r NRMSE2 = 0.3735 (37.35%)
-  T_r RMSE  = 209.268 Pa
-  T_r MAE   = 201.185 Pa
-  T_r MBE   = 201.185 Pa
+  T_r NMRE  = 0.3630 (36.30%)
+  T_r NMAE  = 0.3630 (36.30%)
+  T_r NRMSE = 0.3727 (37.27%)
+  T_r NRMSE2 = 0.3716 (37.16%)
+  T_r RMSE  = 208.220 Pa
+  T_r MAE   = 202.822 Pa
+  T_r MBE   = 202.822 Pa
   Mean |T_true| in contact = 558.686 Pa
-  T_theta NMRE  = 0.4589 (45.89%)
-  T_theta NMAE  = 0.4545 (45.45%)
-  T_theta NRMSE = 0.4877 (48.77%)
-  T_theta NRMSE2 = 0.0373 (3.73%)
-  T_theta RMSE  = 20.925 Pa
-  T_theta MAE   = 19.501 Pa
-  T_theta MBE   = -1.754 Pa
+  T_theta NMRE  = 0.4587 (45.87%)
+  T_theta NMAE  = 0.4552 (45.52%)
+  T_theta NRMSE = 0.4885 (48.85%)
+  T_theta NRMSE2 = 0.0374 (3.74%)
+  T_theta RMSE  = 20.960 Pa
+  T_theta MAE   = 19.533 Pa
+  T_theta MBE   = -0.934 Pa
   Mean |T_true| in contact = 42.908 Pa
-  T_phi NMRE  = 16912033438.3417 (1691203343834.17%)
-  T_phi NMAE  = 16912033438.3417 (1691203343834.17%)
-  T_phi NRMSE = 20760544553.8177 (2076054455381.77%)
-  T_phi NRMSE2 = 0.0037 (0.37%)
-  T_phi RMSE  = 2.076 Pa
-  T_phi MAE   = 1.691 Pa
-  T_phi MBE   = -0.181 Pa
+  T_phi NMRE  = 21213807615.5769 (2121380761557.69%)
+  T_phi NMAE  = 21213807615.5769 (2121380761557.69%)
+  T_phi NRMSE = 26105968131.5990 (2610596813159.90%)
+  T_phi NRMSE2 = 0.0047 (0.47%)
+  T_phi RMSE  = 2.611 Pa
+  T_phi MAE   = 2.121 Pa
+  T_phi MBE   = 0.115 Pa
   Mean |T_true| in contact = 0.000 Pa
 
 TRACTION-FREE REGION (spurious tractions):
-  T_r RMSE = 91.339 Pa
-  T_r MAE  = 67.815 Pa
-  Mean |T_recon| = 103.167 Pa (should be ~0)
-  T_theta RMSE = 46.761 Pa
-  T_theta MAE  = 37.477 Pa
-  Mean |T_recon| = 51.515 Pa (should be ~0)
-  T_phi RMSE = 1.894 Pa
-  T_phi MAE  = 1.376 Pa
-  Mean |T_recon| = 1.376 Pa (should be ~0)
+  T_r RMSE = 91.768 Pa
+  T_r MAE  = 68.006 Pa
+  Mean |T_recon| = 100.998 Pa (should be ~0)
+  T_theta RMSE = 46.680 Pa
+  T_theta MAE  = 37.394 Pa
+  Mean |T_recon| = 51.051 Pa (should be ~0)
+  T_phi RMSE = 2.084 Pa
+  T_phi MAE  = 1.501 Pa
+  Mean |T_recon| = 1.501 Pa (should be ~0)
 
 INTERPRETATION:
   Contact region reconstruction quality (NMRE):
-    T_r: 36.0%
+    T_r: 36.3%
     T_theta: 45.9%
-    T_phi: 1691203343834.2%
+    T_phi: 2121380761557.7%
 
   Spurious traction amplitude in traction-free region:
-    T_r: 67.8 Pa (~67.0% of contact pressure)
-    T_theta: 37.5 Pa (~121.8% of contact pressure)
-    T_phi: 1.4 Pa (~0.0% of contact pressure)
+    T_r: 68.0 Pa (~67.2% of contact pressure)
+    T_theta: 37.4 Pa (~121.6% of contact pressure)
+    T_phi: 1.5 Pa (~0.0% of contact pressure)
 
   Overall NRMSE2 may be inflated by Gibbs phenomenon at contact boundaries.
 ------------------------------------------------------------

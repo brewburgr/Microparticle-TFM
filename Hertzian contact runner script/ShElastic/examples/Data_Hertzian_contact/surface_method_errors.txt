@@ -2,7 +2,7 @@
 SURFACE METHOD - ERROR ANALYSIS
 ======================================================================
 
-Runtime: 223.74s
+Runtime: 263.07s
 E = 1500 Pa, nu = 0.4
 lJmax = 20, lmax_plot = 50
 ROUGHNESS_RMS = 0.02
