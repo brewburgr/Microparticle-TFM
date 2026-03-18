@@ -1,0 +1,74 @@
+======================================================================
+SURFACE METHOD - ERROR ANALYSIS
+======================================================================
+
+Runtime: 223.74s
+E = 1500 Pa, nu = 0.4
+lJmax = 20, lmax_plot = 50
+ROUGHNESS_RMS = 0.02
+FIBONACCI_SAMPLES = 2000
+Contact radius a = 0.5 (code units)
+Contact region: θ ∈ [0°, 9°] ∪ [171°, 180°], 404 points (7.8% of grid)
+
+Contact region AAD2 (vector magnitude) = 560.331 Pa
+
+FULL SPHERE Error Metrics (includes traction-free region):
+   Errortype     T_sph_r  T_sph_theta   T_sph_phi    T_cart_x    T_cart_y    T_cart_z
+0       RMSE   64.815425    21.018784   16.853353   35.684362   30.163970   52.379628
+1        MAE   48.839091    14.242622    9.339135   23.320848   20.449409   35.533233
+2        MBE  -13.781336    -1.566886    0.094323   -0.727760   -0.817630    4.840776
+3      NRMSE    0.255772     0.347352    0.000000    0.000000    0.000000    0.201046
+4       NMAE    0.192727     0.235371    0.000000    0.000000    0.000000    0.136385
+5       NMBE   -0.054383    -0.025894    0.000000    0.000000    0.000000    0.018580
+6        AAD  137.027301    31.714828    0.000000    0.000000    0.000000  141.866485
+7    AAD_est  164.136791    32.140876    9.339135   23.320848   20.449409  154.187219
+8     NRMSE2    0.460829     0.149441    0.119825    0.251535    0.212622    0.369218
+9      NMAE2    0.347239     0.101263    0.066400    0.164386    0.144145    0.250470
+10     NMBE2   -0.097983    -0.011140    0.000671   -0.005130   -0.005763    0.034122
+11      AAD2  140.649606   140.649606  140.649606  141.866485  141.866485  141.866485
+
+NMRE = mean(|T_recon - T_true| / (|T_true| + eps)) over region
+NMAE = mean(|T_recon - T_true|) / mean(|T_true|) over region
+CONTACT REGION ONLY Error Metrics:
+  T_r NMRE  = 0.0999 (9.99%)
+  T_r NMAE  = 0.0999 (9.99%)
+  T_r NRMSE = 0.1202 (12.02%)
+  T_r NRMSE2 = 0.1198 (11.98%)
+  T_r RMSE  = 67.143 Pa
+  T_r MAE   = 55.785 Pa
+  T_r MBE   = -2.100 Pa
+  Mean |T_true| in contact = 558.686 Pa
+  T_theta NMRE  = 0.6879 (68.79%)
+  T_theta NMAE  = 0.5834 (58.34%)
+  T_theta NRMSE = 0.7034 (70.34%)
+  T_theta NRMSE2 = 0.0539 (5.39%)
+  T_theta RMSE  = 30.182 Pa
+  T_theta MAE   = 25.033 Pa
+  T_theta MBE   = -8.434 Pa
+  Mean |T_true| in contact = 42.908 Pa
+  T_phi NMRE  = 232427519536.6266 (23242751953662.66%)
+  T_phi NMAE  = 232427519536.6266 (23242751953662.66%)
+  T_phi NRMSE = 331443923947.6833 (33144392394768.34%)
+  T_phi NRMSE2 = 0.0592 (5.92%)
+  T_phi RMSE  = 33.144 Pa
+  T_phi MAE   = 23.243 Pa
+  T_phi MBE   = -0.466 Pa
+  Mean |T_true| in contact = 0.000 Pa
+
+TRACTION-FREE REGION (spurious tractions):
+  T_r RMSE = 64.613 Pa
+  T_r MAE  = 48.248 Pa
+  Mean |T_recon| = 130.379 Pa (should be ~0)
+  T_theta RMSE = 20.046 Pa
+  T_theta MAE  = 13.324 Pa
+  Mean |T_recon| = 31.528 Pa (should be ~0)
+  T_phi RMSE = 14.653 Pa
+  T_phi MAE  = 8.156 Pa
+  Mean |T_recon| = 8.156 Pa (should be ~0)
+
+INTERPRETATION:
+  Contact region reconstruction quality (NMRE):
+    T_r: 10.0%
+    T_theta: 68.8%
+    T_phi: 23242751953662.7%
+  Overall NRMSE2 inflated by Gibbs phenomenon at contact boundary.
