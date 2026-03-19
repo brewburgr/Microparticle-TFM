@@ -51,4 +51,4 @@ The script will produce two output files in the directory specified by `baseDir`
 - `u_profile.mat` – 3D displacement field
 - `mesh_profile.mat` – Corresponding mesh grid points
 
-These files are used by `Hertzian_example_runner.py` (when moved in the Data_Hertzian_contact subdirectory) for further analysis with the volume method.
+These files are used by `Hertzian_example_runner.py` (when moved in the `Data_Hertzian_contact/` subdirectory) for further analysis with the volume method.
