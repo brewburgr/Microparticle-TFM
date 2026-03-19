@@ -47,6 +47,8 @@ V. L. Popov, M. Heß and E. Willert, Handbook of Contact Mechanics: Exact Soluti
 
 H. Hertz, Journal für die reine und angewandte Mathematik, 1882, 92, 156–171.
 
+J. R. Barber, Elasticity, Springer Science & Business Media, 2006.
+
 ---
 
 For analyses of **experimental data**, we used custom Python scripts for preprocessing in the volume method to recover suitable nanoparticle image pairs as explained in our manuscript. For experimental evaluations with the surface method, we used GeoV on DNA-HMP outlines generated in Fiji (ImageJ) to reconstruct deformed surfaces as .ply files as described in our manuscript.
