@@ -5,7 +5,7 @@ It accompanies our manuscript that describes and evaluates the approaches:
 
 **Volume and surface methods for microparticle traction force microscopy: a computational and experimental comparison**
 
-Simon Brauburger, Bastian K. Kraus, Tobias Walther, Tobias Abele, Kerstin Göpfrich and Ulrich S. Schwarz
+Simon Brauburger, Bastian K. Kraus, Tobias Walther, Tobias Abele, Kerstin Göpfrich, and Ulrich S. Schwarz
 
 ---
 
